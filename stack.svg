@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" width="860" height="360" fill="none">
+  <defs>
+    <linearGradient id="stkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1224"/>
+      <stop offset="100%" stop-color="#070b16"/>
+    </linearGradient>
+
+    <linearGradient id="stkBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .orbit-rot-1, .orbit-rot-2, .orbit-rot-3 { animation: none !important; }
+      }
+
+      .s-font-mono { font-family: 'Fira Code', Consolas, monospace; }
+      .s-font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .s-font-display { font-family: 'Space Grotesk', -apple-system, sans-serif; }
+
+      /* Rotation keyframes for orbits */
+      @keyframes orbitClockwise {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbitCounter {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+
+      .orbit-rot-1 { animation: orbitClockwise 26s linear infinite; transform-origin: 220px 145px; }
+      .orbit-rot-2 { animation: orbitCounter 34s linear infinite; transform-origin: 220px 145px; }
+      .orbit-rot-3 { animation: orbitClockwise 42s linear infinite; transform-origin: 220px 145px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="1" y="1" width="858" height="358" rx="24" fill="url(#stkBg)"/>
+  <rect x="1" y="1" width="858" height="358" rx="24" fill="none" stroke="url(#stkBorder)" stroke-width="1.8"/>
+
+  <!-- Left: 3 Tilted Elliptical Orbits with Security & Dev Nodes -->
+  <g transform="translate(0, 0)">
+    
+    <!-- Central Core Node -->
+    <g transform="translate(220, 145)">
+      <circle cx="0" cy="0" r="28" fill="#070b16" stroke="#247bff" stroke-width="2"/>
+      <circle cx="0" cy="0" r="22" fill="#247bff" fill-opacity="0.15"/>
+      <text x="0" y="4" fill="#ffffff" class="s-font-mono" font-size="11" font-weight="700" text-anchor="middle">DEFENSE</text>
+      <!-- Core Pulsing Glow -->
+      <circle cx="0" cy="0" r="34" stroke="#247bff" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+    </g>
+
+    <!-- Orbit 1: Inner Orbit (R_x: 75, R_y: 45, tilted -25deg) -->
+    <g transform="translate(220, 145) rotate(-20) translate(-220, -145)">
+      <ellipse cx="220" cy="145" rx="78" ry="46" stroke="#247bff" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+      <!-- Inner Orbit Satellite group -->
+      <g class="orbit-rot-1">
+        <!-- Node: Snort -->
+        <g transform="translate(298, 145)">
+          <rect x="-30" y="-12" width="60" height="24" rx="6" fill="#070b16" stroke="#ff354f" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#ffffff" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">SNORT</text>
+        </g>
+        <!-- Node: Nmap -->
+        <g transform="translate(142, 145)">
+          <rect x="-26" y="-12" width="52" height="24" rx="6" fill="#070b16" stroke="#247bff" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#ffffff" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">NMAP</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Orbit 2: Middle Orbit (R_x: 125, R_y: 72, tilted 25deg) -->
+    <g transform="translate(220, 145) rotate(25) translate(-220, -145)">
+      <ellipse cx="220" cy="145" rx="125" ry="72" stroke="#247bff" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+      <g class="orbit-rot-2">
+        <!-- Node: Wireshark -->
+        <g transform="translate(345, 145)">
+          <rect x="-42" y="-12" width="84" height="24" rx="6" fill="#070b16" stroke="#247bff" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#38bdf8" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">WIRESHARK</text>
+        </g>
+        <!-- Node: Kali Linux -->
+        <g transform="translate(95, 145)">
+          <rect x="-40" y="-12" width="80" height="24" rx="6" fill="#070b16" stroke="#38ef7d" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#38ef7d" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">KALI LINUX</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Orbit 3: Outer Orbit (R_x: 170, R_y: 98, tilted -10deg) -->
+    <g transform="translate(220, 145) rotate(-10) translate(-220, -145)">
+      <ellipse cx="220" cy="145" rx="172" ry="98" stroke="#ff354f" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+      <g class="orbit-rot-3">
+        <!-- Node: Python (FastAPI) -->
+        <g transform="translate(392, 145)">
+          <rect x="-46" y="-12" width="92" height="24" rx="6" fill="#070b16" stroke="#ffbd2e" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#ffbd2e" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">PYTHON API</text>
+        </g>
+        <!-- Node: AES-GCM -->
+        <g transform="translate(48, 145)">
+          <rect x="-38" y="-12" width="76" height="24" rx="6" fill="#070b16" stroke="#a78bfa" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#a78bfa" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">AES-GCM</text>
+        </g>
+        <!-- Node: WebSockets -->
+        <g transform="translate(220, 47)">
+          <rect x="-44" y="-12" width="88" height="24" rx="6" fill="#070b16" stroke="#247bff" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#ffffff" class="s-font-mono" font-size="9.5" font-weight="600" text-anchor="middle">WEBSOCKETS</text>
+        </g>
+        <!-- Node: SQL -->
+        <g transform="translate(220, 243)">
+          <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#070b16" stroke="#247bff" stroke-width="1.4"/>
+          <text x="0" y="4" fill="#ffffff" class="s-font-mono" font-size="10" font-weight="600" text-anchor="middle">SQL</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Grouped Stack Chips & Ecosystem Matrix -->
+  <g transform="translate(460, 40)">
+    <text x="0" y="15" fill="#247bff" class="s-font-mono" font-size="11" font-weight="700" letter-spacing="0.1em">TECHNICAL REPERTOIRE</text>
+    <text x="0" y="42" fill="#ffffff" class="s-font-display" font-size="22" font-weight="700">Security &amp; Engineering Stack</text>
+
+    <!-- Group 1: Defensive & Network Telemetry -->
+    <g transform="translate(0, 68)">
+      <text x="0" y="0" fill="#8b949e" class="s-font-mono" font-size="11" font-weight="600">DEFENSIVE &amp; PACKET ANALYSIS</text>
+      <g transform="translate(0, 10)">
+        <!-- Snort Chip -->
+        <rect x="0" y="0" width="76" height="28" rx="8" fill="#11182c" stroke="#ff354f" stroke-width="1"/>
+        <text x="38" y="18" fill="#ff354f" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">Snort</text>
+
+        <!-- Wireshark Chip -->
+        <rect x="84" y="0" width="98" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="133" y="18" fill="#38bdf8" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">Wireshark</text>
+
+        <!-- Nmap Chip -->
+        <rect x="190" y="0" width="72" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="226" y="18" fill="#ffffff" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">Nmap</text>
+
+        <!-- Kali Linux Chip -->
+        <rect x="270" y="0" width="92" height="28" rx="8" fill="#11182c" stroke="#38ef7d" stroke-width="1"/>
+        <text x="316" y="18" fill="#38ef7d" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">Kali Linux</text>
+      </g>
+    </g>
+
+    <!-- Group 2: Systems, Backend & Cryptography -->
+    <g transform="translate(0, 138)">
+      <text x="0" y="0" fill="#8b949e" class="s-font-mono" font-size="11" font-weight="600">SYSTEMS, DATA &amp; CRYPTOGRAPHY</text>
+      <g transform="translate(0, 10)">
+        <!-- Python (FastAPI) -->
+        <rect x="0" y="0" width="135" height="28" rx="8" fill="#11182c" stroke="#ffbd2e" stroke-width="1"/>
+        <text x="67" y="18" fill="#ffbd2e" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">Python (FastAPI)</text>
+
+        <!-- AES-GCM -->
+        <rect x="143" y="0" width="90" height="28" rx="8" fill="#11182c" stroke="#a78bfa" stroke-width="1"/>
+        <text x="188" y="18" fill="#a78bfa" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">AES-GCM</text>
+
+        <!-- WebSockets -->
+        <rect x="241" y="0" width="108" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="295" y="18" fill="#ffffff" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">WebSockets</text>
+      </g>
+    </g>
+
+    <!-- Group 3: Database & Security Operations -->
+    <g transform="translate(0, 208)">
+      <text x="0" y="0" fill="#8b949e" class="s-font-mono" font-size="11" font-weight="600">OPERATIONS &amp; INFRASTRUCTURE</text>
+      <g transform="translate(0, 10)">
+        <!-- SQL -->
+        <rect x="0" y="0" width="62" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="31" y="18" fill="#ffffff" class="s-font-mono" font-size="11" font-weight="600" text-anchor="middle">SQL</text>
+
+        <!-- SOC Incident Response -->
+        <rect x="70" y="0" width="135" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="137" y="18" fill="#8b949e" class="s-font-mono" font-size="11" font-weight="500" text-anchor="middle">SOC Operations</text>
+
+        <!-- Defensive Hardening -->
+        <rect x="213" y="0" width="138" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1"/>
+        <text x="282" y="18" fill="#8b949e" class="s-font-mono" font-size="11" font-weight="500" text-anchor="middle">System Hardening</text>
+      </g>
+    </g>
+
+    <!-- Real-time verification notice -->
+    <g transform="translate(0, 276)">
+      <text x="0" y="0" fill="#8b949e" class="s-font-mono" font-size="11">
+        STATUS: <tspan fill="#38ef7d">ALL PACKET INSPECTION NODES VERIFIED</tspan>
+      </text>
+    </g>
+
+  </g>
+</svg>

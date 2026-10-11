@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" width="860" height="360" fill="none">
+  <defs>
+    <linearGradient id="abBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1224"/>
+      <stop offset="100%" stop-color="#070b16"/>
+    </linearGradient>
+
+    <linearGradient id="abBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#247bff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <linearGradient id="progFillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#247bff"/>
+      <stop offset="100%" stop-color="#ff354f"/>
+    </linearGradient>
+
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .carousel-slide-1, .carousel-slide-2, .carousel-slide-3 { opacity: 1 !important; }
+        .progress-bar-fill { width: 100% !important; animation: none !important; }
+      }
+
+      .a-font-mono { font-family: 'Fira Code', Consolas, monospace; }
+      .a-font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .a-font-display { font-family: 'Space Grotesk', -apple-system, sans-serif; }
+
+      /* 12s total duration / 3 slides = 4s each */
+      @keyframes slideShow1 {
+        0%, 30% { opacity: 1; transform: translateX(0px); }
+        33.3%, 97% { opacity: 0; transform: translateX(12px); }
+        100% { opacity: 1; transform: translateX(0px); }
+      }
+      @keyframes slideShow2 {
+        0%, 30% { opacity: 0; transform: translateX(-12px); }
+        33.3%, 63.3% { opacity: 1; transform: translateX(0px); }
+        66.6%, 100% { opacity: 0; transform: translateX(12px); }
+      }
+      @keyframes slideShow3 {
+        0%, 63.3% { opacity: 0; transform: translateX(-12px); }
+        66.6%, 96.6% { opacity: 1; transform: translateX(0px); }
+        100% { opacity: 0; transform: translateX(12px); }
+      }
+
+      .slide-1 { animation: slideShow1 12s infinite; }
+      .slide-2 { animation: slideShow2 12s infinite; }
+      .slide-3 { animation: slideShow3 12s infinite; }
+
+      /* Synchronized 3 Segment Progress Bars */
+      @keyframes progFill1 {
+        0% { width: 0px; }
+        30% { width: 104px; }
+        33.3%, 100% { width: 104px; }
+      }
+      @keyframes progFill2 {
+        0%, 33.3% { width: 0px; }
+        63.3% { width: 104px; }
+        66.6%, 100% { width: 104px; }
+      }
+      @keyframes progFill3 {
+        0%, 66.6% { width: 0px; }
+        96.6% { width: 104px; }
+        100% { width: 104px; }
+      }
+
+      .bar-fill-1 { animation: progFill1 12s infinite; }
+      .bar-fill-2 { animation: progFill2 12s infinite; }
+      .bar-fill-3 { animation: progFill3 12s infinite; }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect x="1" y="1" width="858" height="358" rx="24" fill="url(#abBg)"/>
+  <rect x="1" y="1" width="858" height="358" rx="24" fill="none" stroke="url(#abBorder)" stroke-width="1.8"/>
+
+  <!-- Divider Line -->
+  <line x1="430" y1="35" x2="430" y2="325" stroke="#247bff" stroke-opacity="0.18" stroke-dasharray="4 4"/>
+
+  <!-- ================= LEFT COLUMN: CAPABILITIES ================= -->
+  <g transform="translate(45, 40)">
+    <!-- Column Header -->
+    <text x="0" y="15" fill="#247bff" class="a-font-mono" font-size="11" font-weight="700" letter-spacing="0.1em">DEFENSIVE ARSENAL</text>
+    <text x="0" y="42" fill="#ffffff" class="a-font-display" font-size="22" font-weight="700">Core Security Pillars</text>
+
+    <!-- Capability Card 1: Intrusion Detection & Snort -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="345" height="58" rx="10" fill="#070b16" stroke="#247bff" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="28" cy="29" r="14" fill="#247bff" fill-opacity="0.15"/>
+      <path d="M23 29 L27 33 L34 25" stroke="#247bff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="52" y="24" fill="#e6edf3" class="a-font-sans" font-size="13" font-weight="600">Intrusion Detection &amp; Snort</text>
+      <text x="52" y="42" fill="#8b949e" class="a-font-sans" font-size="11">Rule creation, alert triage &amp; live anomaly heuristics</text>
+    </g>
+
+    <!-- Capability Card 2: Packet & Telemetry Analysis -->
+    <g transform="translate(0, 138)">
+      <rect x="0" y="0" width="345" height="58" rx="10" fill="#070b16" stroke="#247bff" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="28" cy="29" r="14" fill="#ff354f" fill-opacity="0.15"/>
+      <path d="M23 29 L26 24 L29 34 L33 29" stroke="#ff354f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="52" y="24" fill="#e6edf3" class="a-font-sans" font-size="13" font-weight="600">Packet &amp; Network Telemetry</text>
+      <text x="52" y="42" fill="#8b949e" class="a-font-sans" font-size="11">Wireshark stream reconstruction &amp; Nmap profiling</text>
+    </g>
+
+    <!-- Capability Card 3: Cryptography & Resilient Architecture -->
+    <g transform="translate(0, 208)">
+      <rect x="0" y="0" width="345" height="58" rx="10" fill="#070b16" stroke="#247bff" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="28" cy="29" r="14" fill="#38ef7d" fill-opacity="0.15"/>
+      <rect x="23" y="26" width="10" height="8" rx="1" stroke="#38ef7d" stroke-width="1.8" fill="none"/>
+      <path d="M25 26 V22 C25 20.5 31 20.5 31 22 V26" stroke="#38ef7d" stroke-width="1.8" fill="none"/>
+      <text x="52" y="24" fill="#e6edf3" class="a-font-sans" font-size="13" font-weight="600">Cryptography &amp; Safe Architecture</text>
+      <text x="52" y="42" fill="#8b949e" class="a-font-sans" font-size="11">AES-GCM encryption, secure websockets &amp; Python APIs</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: INTERESTS CAROUSEL ================= -->
+  <g transform="translate(470, 40)">
+    <!-- Column Header -->
+    <div class="flex items-center justify-between">
+      <text x="0" y="15" fill="#ff354f" class="a-font-mono" font-size="11" font-weight="700" letter-spacing="0.1em">OFF-DUTY &amp; FOCUS</text>
+      <text x="0" y="42" fill="#ffffff" class="a-font-display" font-size="22" font-weight="700">Beyond the SOC Console</text>
+    </div>
+
+    <!-- Segmented Progress Indicator (3 bars) -->
+    <g transform="translate(0, 58)">
+      <!-- Segment 1 -->
+      <rect x="0" y="0" width="104" height="4" rx="2" fill="#16223d"/>
+      <rect x="0" y="0" width="0" height="4" rx="2" fill="url(#progFillGrad)" class="bar-fill-1 progress-bar-fill"/>
+      <!-- Segment 2 -->
+      <rect x="116" y="0" width="104" height="4" rx="2" fill="#16223d"/>
+      <rect x="116" y="0" width="0" height="4" rx="2" fill="url(#progFillGrad)" class="bar-fill-2 progress-bar-fill"/>
+      <!-- Segment 3 -->
+      <rect x="232" y="0" width="104" height="4" rx="2" fill="#16223d"/>
+      <rect x="232" y="0" width="0" height="4" rx="2" fill="url(#progFillGrad)" class="bar-fill-3 progress-bar-fill"/>
+    </g>
+
+    <!-- Carousel Viewport Wrapper -->
+    <g transform="translate(0, 80)">
+      
+      <!-- Slide 1: CTF / Security Labs -->
+      <g class="slide-1 carousel-slide-1">
+        <rect x="0" y="0" width="345" height="186" rx="14" fill="#070b16" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
+        <!-- Tag -->
+        <rect x="18" y="18" width="90" height="22" rx="6" fill="#247bff" fill-opacity="0.15"/>
+        <text x="63" y="33" fill="#247bff" class="a-font-mono" font-size="10.5" font-weight="700" text-anchor="middle">LABS &amp; CTFS</text>
+        <!-- Icon Banner -->
+        <g transform="translate(280, 28)">
+          <polygon points="12,2 22,22 2,22" stroke="#247bff" stroke-width="2" fill="none"/>
+        </g>
+        <text x="18" y="74" fill="#ffffff" class="a-font-display" font-size="18" font-weight="700">Defensive CTF Operations</text>
+        <text x="18" y="100" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Deconstructing attack patterns in Kali Linux sandboxes.
+        </text>
+        <text x="18" y="120" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Reverse-engineering packet vectors to engineer airtight
+        </text>
+        <text x="18" y="140" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Snort rules and automated perimeter countermeasures.
+        </text>
+        <text x="18" y="166" fill="#247bff" class="a-font-mono" font-size="11" font-weight="600">01 / 03 · Adversarial Simulation</text>
+      </g>
+
+      <!-- Slide 2: Portrait Photography & Digital Aesthetics -->
+      <g class="slide-2 carousel-slide-2">
+        <rect x="0" y="0" width="345" height="186" rx="14" fill="#070b16" stroke="#ff354f" stroke-width="1.2" stroke-opacity="0.4"/>
+        <!-- Tag -->
+        <rect x="18" y="18" width="138" height="22" rx="6" fill="#ff354f" fill-opacity="0.15"/>
+        <text x="87" y="33" fill="#ff354f" class="a-font-mono" font-size="10.5" font-weight="700" text-anchor="middle">PORTRAIT &amp; VISUALS</text>
+        <!-- Camera Icon -->
+        <g transform="translate(280, 24)">
+          <rect x="2" y="6" width="22" height="16" rx="3" stroke="#ff354f" stroke-width="1.8" fill="none"/>
+          <circle cx="13" cy="14" r="4.5" stroke="#ff354f" stroke-width="1.8" fill="none"/>
+        </g>
+        <text x="18" y="74" fill="#ffffff" class="a-font-display" font-size="18" font-weight="700">Digital Aesthetics &amp; Lenses</text>
+        <text x="18" y="100" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Expressing balance through contrast, lighting and depth.
+        </text>
+        <text x="18" y="120" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Translating precision from terminal interfaces to portraiture,
+        </text>
+        <text x="18" y="140" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          composition, color grading, and creative art direction.
+        </text>
+        <text x="18" y="166" fill="#ff354f" class="a-font-mono" font-size="11" font-weight="600">02 / 03 · Creative Visuals</text>
+      </g>
+
+      <!-- Slide 3: Exploring Local Food Spots -->
+      <g class="slide-3 carousel-slide-3">
+        <rect x="0" y="0" width="345" height="186" rx="14" fill="#070b16" stroke="#ffbd2e" stroke-width="1.2" stroke-opacity="0.4"/>
+        <!-- Tag -->
+        <rect x="18" y="18" width="128" height="22" rx="6" fill="#ffbd2e" fill-opacity="0.15"/>
+        <text x="82" y="33" fill="#ffbd2e" class="a-font-mono" font-size="10.5" font-weight="700" text-anchor="middle">FOOD &amp; CULTURE</text>
+        <text x="18" y="74" fill="#ffffff" class="a-font-display" font-size="18" font-weight="700">Local Food &amp; Discovery</text>
+        <text x="18" y="100" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Uncovering hidden gastronomic gems across Rawalpindi &amp;
+        </text>
+        <text x="18" y="120" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          Islamabad. Savoring authentic culinary craftsmanship
+        </text>
+        <text x="18" y="140" fill="#8b949e" class="a-font-sans" font-size="12" font-weight="400">
+          after high-stress incident analysis drills.
+        </text>
+        <text x="18" y="166" fill="#ffbd2e" class="a-font-mono" font-size="11" font-weight="600">03 / 03 · Rawalpindi Culture</text>
+      </g>
+
+    </g>
+  </g>
+</svg>

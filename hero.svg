@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" fill="none">
+  <defs>
+    <!-- Background styling and glows -->
+    <linearGradient id="hBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.8"/>
+      <stop offset="45%" stop-color="#247bff" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#ff354f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <linearGradient id="hBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1224"/>
+      <stop offset="100%" stop-color="#070b16"/>
+    </linearGradient>
+
+    <linearGradient id="hNameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e2edff"/>
+      <stop offset="100%" stop-color="#247bff"/>
+    </linearGradient>
+
+    <!-- Rising text mask reveal for name -->
+    <clipPath id="hNameClip">
+      <rect x="50" y="80" width="540" height="70">
+        <animate attributeName="height" values="0;70;70" keyTimes="0;0.25;1" dur="4s" fill="freeze"/>
+      </rect>
+    </clipPath>
+
+    <!-- Portrait Clip Area -->
+    <clipPath id="hAvatarClip">
+      <rect x="620" y="45" width="190" height="250" rx="20"/>
+    </clipPath>
+
+    <!-- Dot Pattern -->
+    <pattern id="hDotMatrix" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#247bff" fill-opacity="0.12"/>
+    </pattern>
+
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .anim-element { animation: none !important; opacity: 1 !important; transform: none !important; }
+      }
+      
+      .h-font-mono { font-family: 'Fira Code', 'SF Mono', Consolas, monospace; }
+      .h-font-display { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-weight: 800; letter-spacing: -0.03em; }
+      .h-font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+
+      /* Cycling 4 Roles */
+      @keyframes roleCycle {
+        0%, 20% { opacity: 1; transform: translateY(0px); }
+        25%, 95% { opacity: 0; transform: translateY(-8px); }
+        100% { opacity: 1; transform: translateY(0px); }
+      }
+      @keyframes roleCycle2 {
+        0%, 20% { opacity: 0; transform: translateY(8px); }
+        25%, 45% { opacity: 1; transform: translateY(0px); }
+        50%, 100% { opacity: 0; transform: translateY(-8px); }
+      }
+      @keyframes roleCycle3 {
+        0%, 45% { opacity: 0; transform: translateY(8px); }
+        50%, 70% { opacity: 1; transform: translateY(0px); }
+        75%, 100% { opacity: 0; transform: translateY(-8px); }
+      }
+      @keyframes roleCycle4 {
+        0%, 70% { opacity: 0; transform: translateY(8px); }
+        75%, 95% { opacity: 1; transform: translateY(0px); }
+        100% { opacity: 0; transform: translateY(-8px); }
+      }
+
+      .role-1 { animation: roleCycle 12s infinite; }
+      .role-2 { animation: roleCycle2 12s infinite; }
+      .role-3 { animation: roleCycle3 12s infinite; }
+      .role-4 { animation: roleCycle4 12s infinite; }
+
+      /* Blinking cursor */
+      @keyframes blinkCursor {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+      }
+      .cursor-blink { animation: blinkCursor 0.9s infinite; }
+
+      /* Scanner sweep line */
+      @keyframes sweepScan {
+        0% { transform: translateY(-10px); opacity: 0; }
+        15% { opacity: 0.7; }
+        50% { transform: translateY(340px); opacity: 0.7; }
+        55% { opacity: 0; }
+        100% { transform: translateY(-10px); opacity: 0; }
+      }
+      .scanner-line { animation: sweepScan 6s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Card Background with Gradient Border -->
+  <rect x="1" y="1" width="858" height="338" rx="24" fill="url(#hBgGrad)"/>
+  <rect x="1" y="1" width="858" height="338" rx="24" fill="url(#hDotMatrix)"/>
+  <rect x="1" y="1" width="858" height="338" rx="24" fill="none" stroke="url(#hBorderGrad)" stroke-width="1.8"/>
+
+  <!-- Subtle Corner Circuit Accents -->
+  <path d="M25 40 L45 40 L55 50" stroke="#247bff" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+  <circle cx="25" cy="40" r="2.5" fill="#247bff" fill-opacity="0.6"/>
+  <path d="M835 300 L815 300 L805 290" stroke="#ff354f" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+  <circle cx="835" cy="300" r="2.5" fill="#ff354f" fill-opacity="0.6"/>
+
+  <!-- Left Content Area -->
+  <g transform="translate(0, 0)">
+    <!-- Terminal prompt typed greeting -->
+    <g transform="translate(50, 52)">
+      <rect x="-8" y="-14" width="280" height="26" rx="6" fill="#070b16" stroke="#247bff" stroke-opacity="0.3" stroke-width="1"/>
+      <circle cx="2" cy="-1" r="3" fill="#ff354f"/>
+      <circle cx="12" cy="-1" r="3" fill="#ffbd2e"/>
+      <circle cx="22" cy="-1" r="3" fill="#28c840"/>
+      <text x="36" y="3" fill="#247bff" class="h-font-mono" font-size="12" font-weight="600">root@bakarcipher:~$</text>
+      <text x="180" y="3" fill="#e6edf3" class="h-font-mono" font-size="12">whoami</text>
+      <rect x="238" y="-7" width="7" height="14" fill="#247bff" class="cursor-blink"/>
+    </g>
+
+    <!-- Oversized Display Name Reveal with Rising Mask -->
+    <g clip-path="url(#hNameClip)">
+      <text x="50" y="138" fill="url(#hNameGrad)" class="h-font-display" font-size="44" font-weight="800">
+        MALIK ABUBAKAR ALI
+      </text>
+    </g>
+
+    <!-- 4 Cycling Roles -->
+    <g transform="translate(50, 175)">
+      <text x="0" y="0" fill="#247bff" class="h-font-mono" font-size="15" font-weight="600">❯</text>
+      <!-- Role 1 -->
+      <g class="role-1 anim-element">
+        <text x="22" y="0" fill="#247bff" class="h-font-mono" font-size="15" font-weight="600">Cybersecurity Analyst</text>
+        <text x="225" y="0" fill="#8b949e" class="h-font-mono" font-size="12">· Incident Triage &amp; Threat Defense</text>
+      </g>
+      <!-- Role 2 -->
+      <g class="role-2 anim-element">
+        <text x="22" y="0" fill="#ff354f" class="h-font-mono" font-size="15" font-weight="600">SOC Analyst</text>
+        <text x="145" y="0" fill="#8b949e" class="h-font-mono" font-size="12">· SIEM Monitoring &amp; Forensic Correlation</text>
+      </g>
+      <!-- Role 3 -->
+      <g class="role-3 anim-element">
+        <text x="22" y="0" fill="#38ef7d" class="h-font-mono" font-size="15" font-weight="600">Network Defense Specialist</text>
+        <text x="268" y="0" fill="#8b949e" class="h-font-mono" font-size="12">· Snort &amp; Packet Inspection</text>
+      </g>
+      <!-- Role 4 -->
+      <g class="role-4 anim-element">
+        <text x="22" y="0" fill="#a78bfa" class="h-font-mono" font-size="15" font-weight="600">Secure Backend Developer</text>
+        <text x="245" y="0" fill="#8b949e" class="h-font-mono" font-size="12">· Python, FastAPI &amp; AES-GCM</text>
+      </g>
+    </g>
+
+    <!-- One-line pitch -->
+    <text x="50" y="214" fill="#8b949e" class="h-font-sans" font-size="13" font-weight="400">
+      Cyber security scholar &amp; operations team lead passionate about defensive engineering,
+    </text>
+    <text x="50" y="233" fill="#8b949e" class="h-font-sans" font-size="13" font-weight="400">
+      packet-level telemetry, and resilient zero-trust application architectures.
+    </text>
+
+    <!-- Company & Location Row -->
+    <g transform="translate(50, 276)">
+      <!-- Company badge -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="-16" width="292" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1" stroke-opacity="0.35"/>
+        <path d="M14 -2 L20 -8 L26 -2 L20 4 Z" fill="#247bff"/>
+        <text x="34" y="2" fill="#e6edf3" class="h-font-sans" font-size="11.5" font-weight="500">
+          Team Lead @ Ace Solutions · Riphah Scholar
+        </text>
+      </g>
+      <!-- Location badge -->
+      <g transform="translate(304, 0)">
+        <rect x="0" y="-16" width="138" height="28" rx="8" fill="#11182c" stroke="#247bff" stroke-width="1" stroke-opacity="0.35"/>
+        <path d="M12 -4 C12 -8 18 -8 18 -4 C18 0 15 3 15 3 C15 3 12 0 12 -4 Z" fill="#ff354f"/>
+        <circle cx="15" cy="-4" r="1.5" fill="#ffffff"/>
+        <text x="26" y="2" fill="#8b949e" class="h-font-sans" font-size="11.5">Rawalpindi, PK</text>
+      </g>
+      <!-- Status pulse -->
+      <g transform="translate(454, 0)">
+        <rect x="0" y="-16" width="105" height="28" rx="8" fill="#11182c" stroke="#28c840" stroke-width="1" stroke-opacity="0.35"/>
+        <circle cx="14" cy="-2" r="3.5" fill="#28c840">
+          <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="25" y="2" fill="#28c840" class="h-font-mono" font-size="10.5" font-weight="600">DEFENDING</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Portrait Frame with Glowing Cybernetic Glass -->
+  <g transform="translate(620, 45)">
+    <!-- Shadow Card -->
+    <rect x="-4" y="-4" width="198" height="258" rx="24" fill="#060913" stroke="url(#hBorderGrad)" stroke-width="2"/>
+    
+    <!-- Image with Clipping -->
+    <image href="data:image/svg+xml;utf8,%0A%20%20%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20380%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22pGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23247bff%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ff354f%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3CclipPath%20id%3D%22avatarCut%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22180%22%20r%3D%22130%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3C!--%20Stylized%20high-fidelity%20representation%20of%20Malik%20Abubakar%20Ali%20with%20characteristic%20hoodie%20%26%20wavy%20hair%20--%3E%0A%20%20%20%20%20%20%20%20%3Cg%20clip-path%3D%22url(%23avatarCut)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%22300%22%20height%3D%22380%22%20fill%3D%22%230c142c%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Background%20Cyber%20Glows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2290%22%20cy%3D%22110%22%20r%3D%2290%22%20fill%3D%22%23247bff%22%20opacity%3D%220.3%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22210%22%20cy%3D%22200%22%20r%3D%2290%22%20fill%3D%22%23ff354f%22%20opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Body%20%26%20Hoodie%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M50%20380%20C60%20300%2080%20250%20150%20250%20C220%20250%20240%20300%20250%20380%20Z%22%20fill%3D%22%23141a29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M90%20260%20C110%20230%20190%20230%20210%20260%20L200%20380%20L100%20380%20Z%22%20fill%3D%22%231b2438%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hood%20Linings%20with%20Blue%2FCrimson%20Edge%20Rim%20Lighting%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M75%20250%20C85%20200%20110%20185%20150%20185%20C190%20185%20215%20200%20225%20250%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%224%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M225%20250%20C215%20200%20190%20185%20150%20185%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Neck%20%26%20Face%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M125%20180%20L175%20180%20L170%20235%20L130%20235%20Z%22%20fill%3D%22%23e2a77e%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Jaw%20%2F%20Head%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M105%20130%20C105%2085%20195%2085%20195%20130%20C195%20190%20150%20215%20150%20215%20C150%20215%20105%20190%20105%20130%20Z%22%20fill%3D%22%23efb68d%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Beard%20%2F%20Mustache%20%2F%20Goatee%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M128%20172%20Q150%20182%20172%20172%20Q150%20178%20128%20172%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M135%20192%20Q150%20212%20165%20192%20Q150%20200%20135%20192%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M110%20145%20C110%20185%20140%20210%20150%20212%20C160%20210%20190%20185%20190%20145%20C185%20180%20160%20202%20150%20202%20C140%20202%20115%20180%20110%20145%22%20fill%3D%22%23141a27%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Eyes%20%26%20Eyebrows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M118%20122%20Q133%20118%20142%20124%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M158%20124%20Q167%20118%20182%20122%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22169%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Nose%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M150%20126%20L147%20154%20L154%20154%22%20fill%3D%22none%22%20stroke%3D%22%23ba7c57%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Voluminous%20Wavy%20Hair%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M85%20130%20C75%2090%20100%2050%20150%2045%20C200%2045%20230%2085%20220%20125%20C228%20100%20210%2065%20150%2065%20C105%2065%2095%20105%2085%20130%20Z%22%20fill%3D%22%23111723%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M95%20110%20C80%20130%2090%20160%2095%20170%20C90%20150%2090%20120%20110%2090%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M205%20110%20C220%20130%20210%20160%20205%20170%20C210%20150%20210%20120%20190%2090%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hair%20curls%20volume%20mass%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M100%2080%20Q140%2030%20180%2065%20Q210%2060%20215%2095%20Q230%20140%20215%20160%20Q210%20110%20185%2085%20Q150%2075%20115%2095%20Z%22%20fill%3D%22%23161e2e%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20" x="0" y="0" width="190" height="250" preserveAspectRatio="xMidYMid slice" clip-path="url(#hAvatarClip)"/>
+    
+    <!-- Cybernetic HUD Overlay -->
+    <g opacity="0.6">
+      <rect x="8" y="8" width="10" height="10" fill="none" stroke="#247bff" stroke-width="2"/>
+      <rect x="172" y="8" width="10" height="10" fill="none" stroke="#247bff" stroke-width="2"/>
+      <rect x="8" y="232" width="10" height="10" fill="none" stroke="#ff354f" stroke-width="2"/>
+      <rect x="172" y="232" width="10" height="10" fill="none" stroke="#ff354f" stroke-width="2"/>
+    </g>
+
+    <!-- Laser Grid Scanner Sweep Line -->
+    <line x1="0" y1="0" x2="190" y2="0" stroke="#247bff" stroke-width="2" opacity="0.8" class="scanner-line"/>
+
+    <!-- Bottom ID Stamp -->
+    <rect x="25" y="215" width="140" height="20" rx="4" fill="#070b16" fill-opacity="0.85" stroke="#247bff" stroke-width="0.8"/>
+    <text x="95" y="229" fill="#247bff" class="h-font-mono" font-size="9" font-weight="600" text-anchor="middle">AUTH_ID: #BC-0924</text>
+  </g>
+</svg>
