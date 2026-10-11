@@ -3,21 +3,30 @@
 <!-- CYBER WAVE HEADER -->
 <img src="https://capsule-render.vercel.app/api?type=cylinder&color=070b16,111d38,247bff&height=180&section=header&text=%5B%20SOC%20DEFENSE%20TERMINAL%20%5D&fontSize=32&fontColor=ffffff&fontAlignY=38&desc=OPERATOR%3A%20MALIK%20ABUBAKAR%20ALI%20%7C%20NODE%3A%20PK-RAW-01&descAlignY=62&descSize=13&descAlign=50" width="100%" />
 
-<!-- TACTICAL CLEARANCE BADGES -->
+<!-- TACTICAL CLEARANCE BADGES (NATIVE - ZERO BROKEN IMAGES) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/CLEARANCE-TIER--1%20SOC%20OPERATOR-247BFF?style=for-the-badge&logo=auth0&logoColor=white" />
+  <a href="https://github.com/BakarCipher" style="text-decoration:none;">
+    <span style="display:inline-block; background:#0b1528; border:1px solid #247bff; color:#58a6ff; font-family:monospace; font-size:11px; font-weight:bold; padding:6px 14px; border-radius:6px; letter-spacing:0.05em;">
+      🛡️ CLEARANCE: TIER-1 SOC OPERATOR
+    </span>
+  </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/AFFILIATION-RIPHAH%20CYBER%20SECURITY-11182c?style=for-the-badge&logo=shield&logoColor=247bff" />
+  <a href="https://github.com/BakarCipher" style="text-decoration:none;">
+    <span style="display:inline-block; background:#0b1528; border:1px solid #247bff; color:#e6edf3; font-family:monospace; font-size:11px; font-weight:bold; padding:6px 14px; border-radius:6px; letter-spacing:0.05em;">
+      🎓 RIPHAH CYBER SECURITY
+    </span>
+  </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/OPS-LEAD%20%40%20ACE%20SOLUTIONS-ff354f?style=for-the-badge&logo=target&logoColor=white" />
+  <a href="https://github.com/BakarCipher" style="text-decoration:none;">
+    <span style="display:inline-block; background:#1a0f18; border:1px solid #ff354f; color:#ff7b72; font-family:monospace; font-size:11px; font-weight:bold; padding:6px 14px; border-radius:6px; letter-spacing:0.05em;">
+      ⚡ LEAD @ ACE SOLUTIONS
+    </span>
+  </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/STATUS-LIVE%20INTERCEPTION-28c840?style=for-the-badge&logo=radar&logoColor=white" />
-</p>
-
-<!-- LIVE STATS & TYPING TELEMETRY -->
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=2800&pause=900&color=247BFF&center=true&vCenter=true&multiline=false&width=750&height=36&lines=>>%20INITIALIZING%20NETWORK%20DEFENSE%20PROTOCOL...;>>%20DEPLOYING%20SNORT%20INSPECTION%20%26%20PACKET%20TELEMETRY...;>>%20ESTABLISHING%20AES-256%20GCM%20ENCRYPTED%20TUNNELS...;>>%20MALIK%20ABUBAKAR%20ALI%20%7C%20SECURITY%20ENGINEER" alt="Typing SVG" />
+  <a href="https://github.com/BakarCipher" style="text-decoration:none;">
+    <span style="display:inline-block; background:#0d1e15; border:1px solid #28c840; color:#38ef7d; font-family:monospace; font-size:11px; font-weight:bold; padding:6px 14px; border-radius:6px; letter-spacing:0.05em;">
+      📡 STATUS: LIVE INTERCEPTION
+    </span>
   </a>
 </p>
 
@@ -83,24 +92,35 @@
       <h3 style="color: #ffffff; font-size: 26px; margin: 0 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700;">
         Direct Communication Channel
       </h3>
-      <p style="color: #8b949e; font-size: 13.5px; line-height: 1.5; margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+      <p style="color: #8b949e; font-size: 13.5px; line-height: 1.5; margin: 0 0 22px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
         Open to discussions on blue teaming, intrusion detection rule-writing, SIEM integrations, secure API engineering, and CTF challenges.
       </p>
-      <p style="margin: 0 0 10px 0;">
-        <a href="https://linkedin.com/in/bakarcipher" target="_blank">
-          <img src="https://img.shields.io/badge/LINKEDIN-NETWORK%20CONNECT%20%E2%86%92-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-        </a>
-      </p>
-      <p style="margin: 0 0 10px 0;">
-        <a href="https://instagram.com/bakarcipher" target="_blank">
-          <img src="https://img.shields.io/badge/INSTAGRAM-FOLLOW%20ACTIVITY%20%E2%86%92-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-        </a>
-      </p>
-      <p style="margin: 0;">
-        <a href="https://github.com/bakarcipher?tab=repositories" target="_blank">
-          <img src="https://img.shields.io/badge/GITHUB-PROJECT%20REPOSITORIES%20%E2%86%92-181717?style=for-the-badge&logo=github&logoColor=white" />
-        </a>
-      </p>
+      
+      <!-- BULLETPROOF CLICKABLE PROFILE BUTTONS -->
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <p style="margin: 0 0 10px 0;">
+          <a href="https://linkedin.com/in/bakarcipher" target="_blank" style="text-decoration:none;">
+            <span style="display:inline-block; background:#0a66c2; color:#ffffff; font-family:monospace; font-size:12px; font-weight:bold; padding:8px 18px; border-radius:6px; border:1px solid #247bff;">
+              🔗 LINKEDIN &bull; bakarcipher &rarr;
+            </span>
+          </a>
+        </p>
+        <p style="margin: 0 0 10px 0;">
+          <a href="https://instagram.com/bakarcipher" target="_blank" style="text-decoration:none;">
+            <span style="display:inline-block; background:#e4405f; color:#ffffff; font-family:monospace; font-size:12px; font-weight:bold; padding:8px 18px; border-radius:6px; border:1px solid #ff354f;">
+              📸 INSTAGRAM &bull; bakarcipher &rarr;
+            </span>
+          </a>
+        </p>
+        <p style="margin: 0;">
+          <a href="https://github.com/BakarCipher?tab=repositories" target="_blank" style="text-decoration:none;">
+            <span style="display:inline-block; background:#161b22; color:#58a6ff; font-family:monospace; font-size:12px; font-weight:bold; padding:8px 18px; border-radius:6px; border:1px solid #30363d;">
+              💻 GITHUB REPOSITORIES &rarr;
+            </span>
+          </a>
+        </p>
+      </div>
+
     </td>
   </tr>
 </table>
