@@ -10,10 +10,10 @@
 
 <br/>
 
-<!-- HERO SECTION: Terminal whoami, Name Reveal, Cycling Roles, Pitch & Portrait -->
+<!-- HERO SECTION: Identity Banner with Your ID Picture -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 20px; overflow: hidden; margin-bottom: 25px;">
   <tr>
-    <td width="72%" align="left" style="padding: 24px; vertical-align: middle;">
+    <td width="70%" align="left" style="padding: 24px; vertical-align: middle;">
       <p style="font-family: monospace; color: #247bff; font-size: 14px; margin: 0 0 10px 0;">
         <strong>root@bakarcipher:~$</strong> whoami
       </p>
@@ -34,8 +34,8 @@
         <span style="background: #11182c; border: 1px solid #28c840; color: #28c840; padding: 6px 12px; border-radius: 6px;">● DEFENDING</span>
       </p>
     </td>
-    <td width="28%" align="center" style="padding: 18px; vertical-align: middle;">
-      <img src="./id.png" alt="Malik Abubakar Ali" width="190" style="border-radius: 20px; border: 2px solid #247bff; box-shadow: 0 0 20px rgba(36, 123, 255, 0.4); display: block;" />
+    <td width="30%" align="center" style="padding: 18px; vertical-align: middle;">
+      <img src="./id.png.png" alt="Malik Abubakar Ali" width="190" style="border-radius: 20px; border: 2px solid #247bff; box-shadow: 0 0 20px rgba(36, 123, 255, 0.4); display: block;" />
     </td>
   </tr>
 </table>
@@ -57,13 +57,13 @@
 
 <br/><br/>
 
-<!-- DIRECT CONNECT SECTION: Character pointing towards social links -->
+<!-- CONNECT SECTION: Pointing Character & Contact Details -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 20px; overflow: hidden; margin-bottom: 25px;">
   <tr>
-    <td width="36%" align="center" style="padding: 20px; vertical-align: middle;">
-      <img src="./right_pointing.png" alt="Connect with Bakar" width="220" style="display: block;" />
+    <td width="35%" align="center" style="padding: 20px; vertical-align: middle;">
+      <img src="./right_pointing.png.png" alt="Connect with Bakar" width="220" style="display: block;" />
     </td>
-    <td width="64%" align="left" style="padding: 24px; vertical-align: middle;">
+    <td width="65%" align="left" style="padding: 24px; vertical-align: middle;">
       <h3 style="color: #ffffff; font-size: 24px; margin: 0 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
         Let's Connect &amp; Collaborate
       </h3>
