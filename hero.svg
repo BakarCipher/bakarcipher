@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 860 340" width="860" height="340" fill="none">
   <defs>
     <!-- Background styling and glows -->
     <linearGradient id="hBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -29,7 +29,7 @@
 
     <!-- Portrait Clip Area -->
     <clipPath id="hAvatarClip">
-      <rect x="620" y="45" width="190" height="250" rx="20"/>
+      <rect x="0" y="0" width="190" height="250" rx="20"/>
     </clipPath>
 
     <!-- Dot Pattern -->
@@ -84,7 +84,7 @@
       @keyframes sweepScan {
         0% { transform: translateY(-10px); opacity: 0; }
         15% { opacity: 0.7; }
-        50% { transform: translateY(340px); opacity: 0.7; }
+        50% { transform: translateY(250px); opacity: 0.7; }
         55% { opacity: 0; }
         100% { transform: translateY(-10px); opacity: 0; }
       }
@@ -189,8 +189,11 @@
     <!-- Shadow Card -->
     <rect x="-4" y="-4" width="198" height="258" rx="24" fill="#060913" stroke="url(#hBorderGrad)" stroke-width="2"/>
     
-    <!-- Image with Clipping -->
-    <image href="data:image/svg+xml;utf8,%0A%20%20%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20380%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22pGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23247bff%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ff354f%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3CclipPath%20id%3D%22avatarCut%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22180%22%20r%3D%22130%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3C!--%20Stylized%20high-fidelity%20representation%20of%20Malik%20Abubakar%20Ali%20with%20characteristic%20hoodie%20%26%20wavy%20hair%20--%3E%0A%20%20%20%20%20%20%20%20%3Cg%20clip-path%3D%22url(%23avatarCut)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%22300%22%20height%3D%22380%22%20fill%3D%22%230c142c%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Background%20Cyber%20Glows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2290%22%20cy%3D%22110%22%20r%3D%2290%22%20fill%3D%22%23247bff%22%20opacity%3D%220.3%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22210%22%20cy%3D%22200%22%20r%3D%2290%22%20fill%3D%22%23ff354f%22%20opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Body%20%26%20Hoodie%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M50%20380%20C60%20300%2080%20250%20150%20250%20C220%20250%20240%20300%20250%20380%20Z%22%20fill%3D%22%23141a29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M90%20260%20C110%20230%20190%20230%20210%20260%20L200%20380%20L100%20380%20Z%22%20fill%3D%22%231b2438%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hood%20Linings%20with%20Blue%2FCrimson%20Edge%20Rim%20Lighting%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M75%20250%20C85%20200%20110%20185%20150%20185%20C190%20185%20215%20200%20225%20250%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%224%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M225%20250%20C215%20200%20190%20185%20150%20185%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Neck%20%26%20Face%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M125%20180%20L175%20180%20L170%20235%20L130%20235%20Z%22%20fill%3D%22%23e2a77e%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Jaw%20%2F%20Head%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M105%20130%20C105%2085%20195%2085%20195%20130%20C195%20190%20150%20215%20150%20215%20C150%20215%20105%20190%20105%20130%20Z%22%20fill%3D%22%23efb68d%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Beard%20%2F%20Mustache%20%2F%20Goatee%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M128%20172%20Q150%20182%20172%20172%20Q150%20178%20128%20172%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M135%20192%20Q150%20212%20165%20192%20Q150%20200%20135%20192%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M110%20145%20C110%20185%20140%20210%20150%20212%20C160%20210%20190%20185%20190%20145%20C185%20180%20160%20202%20150%20202%20C140%20202%20115%20180%20110%20145%22%20fill%3D%22%23141a27%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Eyes%20%26%20Eyebrows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M118%20122%20Q133%20118%20142%20124%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M158%20124%20Q167%20118%20182%20122%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22169%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Nose%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M150%20126%20L147%20154%20L154%20154%22%20fill%3D%22none%22%20stroke%3D%22%23ba7c57%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Voluminous%20Wavy%20Hair%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M85%20130%20C75%2090%20100%2050%20150%2045%20C200%2045%20230%2085%20220%20125%20C228%20100%20210%2065%20150%2065%20C105%2065%2095%20105%2085%20130%20Z%22%20fill%3D%22%23111723%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M95%20110%20C80%20130%2090%20160%2095%20170%20C90%20150%2090%20120%20110%2090%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M205%20110%20C220%20130%20210%20160%20205%20170%20C210%20150%20210%20120%20190%2090%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hair%20curls%20volume%20mass%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M100%2080%20Q140%2030%20180%2065%20Q210%2060%20215%2095%20Q230%20140%20215%20160%20Q210%20110%20185%2085%20Q150%2075%20115%2095%20Z%22%20fill%3D%22%23161e2e%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20" x="0" y="0" width="190" height="250" preserveAspectRatio="xMidYMid slice" clip-path="url(#hAvatarClip)"/>
+    <!-- Image with Clipping linking to uploaded id.png.png -->
+    <g clip-path="url(#hAvatarClip)">
+      <rect x="0" y="0" width="190" height="250" fill="#0c142c"/>
+      <image href="https://raw.githubusercontent.com/BakarCipher/bakarcipher/main/id.png.png" xlink:href="https://raw.githubusercontent.com/BakarCipher/bakarcipher/main/id.png.png" x="0" y="0" width="190" height="250" preserveAspectRatio="xMidYMid slice"/>
+    </g>
     
     <!-- Cybernetic HUD Overlay -->
     <g opacity="0.6">
