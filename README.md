@@ -1,58 +1,59 @@
 <div align="center">
 
-<!-- TOP SYSTEM STATUS BAR -->
+<!-- CYBER WAVE HEADER -->
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=070b16,111d38,247bff&height=180&section=header&text=%5B%20SOC%20DEFENSE%20TERMINAL%20%5D&fontSize=32&fontColor=ffffff&fontAlignY=38&desc=OPERATOR%3A%20MALIK%20ABUBAKAR%20ALI%20%7C%20NODE%3A%20PK-RAW-01&descAlignY=62&descSize=13&descAlign=50" width="100%" />
+
+<!-- TACTICAL CLEARANCE BADGES -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=070b16,247bff,ff354f&height=180&section=header&text=MALIK%20ABUBAKAR%20ALI&fontSize=42&fontColor=ffffff&fontAlignY=42&desc=CYBER%20SECURITY%20SCHOLAR%20%7C%20NETWORK%20DEFENSE%20%7C%20OPERATIONS%20LEAD&descAlignY=65&descSize=14&descAlign=50" width="100%" />
+  <img src="https://img.shields.io/badge/CLEARANCE-TIER--1%20SOC%20OPERATOR-247BFF?style=for-the-badge&logo=auth0&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/AFFILIATION-RIPHAH%20CYBER%20SECURITY-11182c?style=for-the-badge&logo=shield&logoColor=247bff" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/OPS-LEAD%20%40%20ACE%20SOLUTIONS-ff354f?style=for-the-badge&logo=target&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/STATUS-LIVE%20INTERCEPTION-28c840?style=for-the-badge&logo=radar&logoColor=white" />
 </p>
 
-<!-- QUICK REACH PILL BADGES -->
+<!-- LIVE STATS & TYPING TELEMETRY -->
 <p align="center">
-  <a href="https://linkedin.com/in/bakarcipher" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-bakarcipher-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=2800&pause=900&color=247BFF&center=true&vCenter=true&multiline=false&width=750&height=36&lines=>>%20INITIALIZING%20NETWORK%20DEFENSE%20PROTOCOL...;>>%20DEPLOYING%20SNORT%20INSPECTION%20%26%20PACKET%20TELEMETRY...;>>%20ESTABLISHING%20AES-256%20GCM%20ENCRYPTED%20TUNNELS...;>>%20MALIK%20ABUBAKAR%20ALI%20%7C%20SECURITY%20ENGINEER" alt="Typing SVG" />
   </a>
-  &nbsp;
-  <a href="https://instagram.com/bakarcipher" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-bakarcipher-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Base-Rawalpindi%2C%20PK-070B16?style=for-the-badge&logo=googlemaps&logoColor=ff354f" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Clearance-Defensive%20Operations-247BFF?style=for-the-badge&logo=shield&logoColor=white" />
 </p>
 
-<br/>
-
-<!-- HERO TERMINAL + PORTRAIT COMPACT HUD -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+<!-- OPERATOR IDENTITY HUD -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 16px; overflow: hidden; margin-top: 15px; margin-bottom: 25px; box-shadow: 0 0 25px rgba(36,123,255,0.25);">
   <tr>
-    <td width="68%" align="left" style="padding: 30px; vertical-align: middle;">
-      <p style="font-family: 'Fira Code', monospace; color: #247bff; font-size: 13px; margin: 0 0 12px 0; letter-spacing: 0.05em;">
-        <strong>[NODE://BAKARCIPHER]</strong> ~ console.dispatch --active
-      </p>
-      <h1 style="color: #ffffff; font-size: 34px; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 800; letter-spacing: -0.02em;">
-        Malik Abubakar Ali
+    <td width="68%" align="left" style="padding: 26px 30px; vertical-align: middle;">
+      <pre style="color: #247bff; font-family: 'Fira Code', monospace; font-size: 11.5px; margin: 0 0 10px 0; line-height: 1.3;">
+┌──(operator㉿bakarcipher)-[~/telemetry]
+└─$ whoami --verbose</pre>
+      <h1 style="color: #ffffff; font-size: 32px; margin: 0 0 6px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 800; letter-spacing: -0.02em;">
+        MALIK ABUBAKAR ALI
       </h1>
-      <p style="font-family: 'Fira Code', monospace; color: #38ef7d; font-size: 14.5px; margin: 0 0 14px 0; font-weight: 600;">
-        ❯ Network Defense Specialist <span style="color: #8b949e; font-weight: 400; font-size: 12.5px;">// Snort, Telemetry &amp; SIEM</span>
+      <p style="font-family: 'Fira Code', monospace; color: #ff354f; font-size: 14px; margin: 0 0 14px 0; font-weight: 600;">
+        [TARGET_FOCUS]: Network Defense &bull; Threat Hunting &bull; Cryptographic Systems
       </p>
-      <p style="color: #c9d1d9; font-size: 13.5px; line-height: 1.6; margin: 0 0 18px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-        Defensive security scholar and enterprise operations lead bridging deep packet inspection, resilient cryptography, and zero-trust service architectures.
+      <p style="color: #8b949e; font-size: 13.5px; line-height: 1.6; margin: 0 0 18px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+        Undergraduate Cyber Security researcher at Riphah International University and Enterprise Team Lead at Ace Solutions. Focused on low-level network telemetry, packet parsing with Wireshark/Snort, zero-trust backend infrastructure, and symmetric modular cryptosystems.
       </p>
       <div>
-        <span style="background: #11182c; border: 1px solid #247bff; color: #58a6ff; padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; font-family: monospace;">◆ Team Lead @ Ace Solutions</span>
+        <span style="background: #10172a; border: 1px solid #247bff; color: #58a6ff; padding: 5px 12px; border-radius: 6px; font-size: 11.5px; font-family: monospace; font-weight: bold;">NODE: PK-RAW-01</span>
         &nbsp;
-        <span style="background: #11182c; border: 1px solid #ff354f; color: #ff7b72; padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; font-family: monospace;">◆ Riphah International Univ.</span>
+        <span style="background: #10172a; border: 1px solid #28c840; color: #28c840; padding: 5px 12px; border-radius: 6px; font-size: 11.5px; font-family: monospace; font-weight: bold;">SECTOR: DEFENSIVE OPS</span>
+        &nbsp;
+        <span style="background: #10172a; border: 1px solid #ff354f; color: #ff7b72; padding: 5px 12px; border-radius: 6px; font-size: 11.5px; font-family: monospace; font-weight: bold;">CIPHER: AES-GCM</span>
       </div>
     </td>
-    <td width="32%" align="center" style="padding: 24px; vertical-align: middle;">
+    <td width="32%" align="center" style="padding: 20px; vertical-align: middle;">
       <div style="position: relative; display: inline-block;">
-        <img src="./id.png.png" alt="Malik Abubakar Ali" width="180" style="border-radius: 20px; border: 2.5px solid #247bff; box-shadow: 0 0 25px rgba(36, 123, 255, 0.5); display: block;" />
+        <img src="./id.png.png" alt="Malik Abubakar Ali" width="185" style="border-radius: 16px; border: 2px solid #247bff; box-shadow: 0 0 25px rgba(36, 123, 255, 0.45); display: block;" />
       </div>
     </td>
   </tr>
 </table>
 
-<br/><br/>
+<br/>
 
 <!-- CREDENTIALS & PHYSICAL LANYARD SECTION -->
 <img src="./id-dashboard.svg?v=1" alt="Credentials ID Dashboard" width="100%" />
@@ -69,56 +70,59 @@
 
 <br/><br/>
 
-<!-- DIRECT CONNECT SECTION: CHARACTER + SOCIAL CARDS -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+<!-- CONNECT SECTION: POINTING CHARACTER & NETWORK COMM -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #070b16; border: 1.5px solid #247bff; border-radius: 16px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 0 25px rgba(36,123,255,0.25);">
   <tr>
-    <td width="34%" align="center" style="padding: 24px; vertical-align: bottom;">
-      <img src="./right_pointing.png.png" alt="Connect with Bakar" width="220" style="display: block;" />
+    <td width="35%" align="center" style="padding: 20px; vertical-align: middle;">
+      <img src="./right_pointing.png.png" alt="Connect with Malik" width="220" style="display: block;" />
     </td>
-    <td width="66%" align="left" style="padding: 30px; vertical-align: middle;">
-      <h3 style="color: #ffffff; font-size: 26px; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700;">
-        Initiate Network Handshake
-      </h3>
-      <p style="color: #8b949e; font-size: 13.5px; line-height: 1.6; margin: 0 0 22px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-        Open for collaborations in defensive engineering, SOC infrastructure, incident response pipelines, or secure backend architectures.
+    <td width="65%" align="left" style="padding: 28px 32px; vertical-align: middle;">
+      <p style="font-family: 'Fira Code', monospace; color: #ff354f; font-size: 12px; margin: 0 0 6px 0;">
+        [ESTABLISH_SOCKET] : HANDSHAKE_REQUEST
       </p>
-      <p style="margin: 0 0 12px 0;">
+      <h3 style="color: #ffffff; font-size: 26px; margin: 0 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700;">
+        Direct Communication Channel
+      </h3>
+      <p style="color: #8b949e; font-size: 13.5px; line-height: 1.5; margin: 0 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+        Open to discussions on blue teaming, intrusion detection rule-writing, SIEM integrations, secure API engineering, and CTF challenges.
+      </p>
+      <p style="margin: 0 0 10px 0;">
         <a href="https://linkedin.com/in/bakarcipher" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-bakarcipher%20%E2%86%92-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+          <img src="https://img.shields.io/badge/LINKEDIN-NETWORK%20CONNECT%20%E2%86%92-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
         </a>
       </p>
-      <p style="margin: 0 0 12px 0;">
+      <p style="margin: 0 0 10px 0;">
         <a href="https://instagram.com/bakarcipher" target="_blank">
-          <img src="https://img.shields.io/badge/Instagram-bakarcipher%20%E2%86%92-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+          <img src="https://img.shields.io/badge/INSTAGRAM-FOLLOW%20ACTIVITY%20%E2%86%92-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
         </a>
       </p>
       <p style="margin: 0;">
         <a href="https://github.com/bakarcipher?tab=repositories" target="_blank">
-          <img src="https://img.shields.io/badge/GitHub-View%20Repositories%20%E2%86%92-181717?style=for-the-badge&logo=github&logoColor=white" />
+          <img src="https://img.shields.io/badge/GITHUB-PROJECT%20REPOSITORIES%20%E2%86%92-181717?style=for-the-badge&logo=github&logoColor=white" />
         </a>
       </p>
     </td>
   </tr>
 </table>
 
-<br/>
-
 </div>
 
 ---
 
-### 🛡️ Operational Directives & Telemetry
+### 🛡️ Tactical Capability Matrix
 
-```yaml
-Operator: Malik Abubakar Ali
-Clearance: Tier-1 Defensive Operations
-University: Riphah International University (Cyber Security)
-Enterprise: Team Lead @ Ace Solutions
-Specializations:
-  - Intrusion Detection & Traffic Analytics (Snort, Wireshark, Nmap)
-  - Cryptographic Systems & Key Exchange (AES-GCM, Modular Matrix Encryption)
-  - Defensive Microservices (FastAPI, WebSockets, Python, SQL)
-Recreation:
-  - Adversarial CTFs & Security War Games
-  - Portrait Photography & Visual Composition
-  - Gastronomic Exploration across Rawalpindi
+```bash
+[+] NETWORK DEFENSE & FORENSICS:
+    ├── Packet Analysis  ─── Wireshark, Tshark, TCPdump (Deep Header Inspection)
+    ├── Intrusion Alerts ─── Snort NIDS (Custom Signature Writing & Traffic Audits)
+    └── Port Scans / Recon ─ Nmap, OSINT Telemetry, Service Fingerprinting
+
+[+] SYSTEM & ARCHITECTURE SECURITY:
+    ├── Core Environment ─── Kali Linux, Debian System Calls, POSIX Architecture
+    ├── Cryptography     ─── AES-GCM (Symmetric 256-bit), Matrix Ciphers, Modular Inverses
+    └── Secure Backends  ─── Python (FastAPI), Real-Time WebSockets, Hardened SQL Databases
+
+[+] CURRENT DIRECTIVES:
+    ├── Academic Degree  ─── BS Cyber Security @ Riphah International University
+    ├── Professional     ─── Team Lead @ Ace Solutions (Workflow & Account Security)
+    └── Lab Focus        ─── Blue Team Defenses, Honeypots & Network Threat Emulation
