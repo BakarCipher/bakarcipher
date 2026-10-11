@@ -11,27 +11,26 @@
 <br/>
 
 <!-- HERO SECTION: Terminal whoami, Name Reveal, Cycling Roles, Pitch & Portrait -->
-<img src="assets/hero.svg?v=1" alt="Malik Abubakar Ali - Hero Banner" width="100%" />
-
+<img src="./hero.svg?v=1" alt="Malik Abubakar Ali - Hero Banner" width="100%" />
 <br/><br/>
 
 <!-- CREDENTIALS & PHYSICAL LANYARD SECTION -->
-<img src="assets/id-dashboard.svg?v=1" alt="Credentials ID Dashboard" width="100%" />
+<img src="./id-dashboard.svg?v=1" alt="Credentials ID Dashboard" width="100%" />
 
 <br/><br/>
 
 <!-- DEFENSIVE CAPABILITIES & LIFE CAROUSEL -->
-<img src="assets/about-life.svg?v=1" alt="Capabilities & Life Interests" width="100%" />
+<img src="./about-life.svg?v=1" alt="Capabilities & Life Interests" width="100%" />
 
 <br/><br/>
 
 <!-- DEFENSIVE TECHNICAL STACK & ORBITS -->
-<img src="assets/stack.svg?v=1" alt="Security & Engineering Stack" width="100%" />
+<img src="./stack.svg?v=1" alt="Security & Engineering Stack" width="100%" />
 
 <br/><br/>
 
 <!-- DIRECT CONNECT SECTION -->
-<img src="assets/connect.svg?v=1" alt="Connect with Malik Abubakar Ali" width="100%" />
+<img src="./connect.svg?v=1" alt="Connect with Malik Abubakar Ali" width="100%" />
 
 ### 🌐 Direct Interactive Network Channels
 *Because GitHub disables hyperlinks embedded directly inside SVG `<img>` tags, connect via the verified endpoints below:*
@@ -48,7 +47,7 @@
 
 ### 🛡️ Defensive Briefing
 
-- **Role & Operations:** Team Lead at Ace Solutions &amp; Cyber Security Student at Riphah International University
+- **Role & Operations:** Team Lead at Ace Solutions & Cyber Security Student at Riphah International University
 - **Core Focus:** Intrusion detection (Snort), packet analysis (Wireshark, Nmap), secure backend architecture (Python, FastAPI), and symmetric encryption (AES-GCM).
-- **Hobbies:** Portrait photography &amp; digital aesthetics, adversarial CTF labs, and exploring local gastronomic spots in Rawalpindi.
+- **Hobbies:** Portrait photography & digital aesthetics, adversarial CTF labs, and exploring local gastronomic spots in Rawalpindi.
 - **Node Identifier:** `PK-RAW-01` | **Handle:** `@bakarcipher`
