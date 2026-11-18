@@ -1,233 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" fill="none">
-  <defs>
-    <linearGradient id="idCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e172e"/>
-      <stop offset="50%" stop-color="#0a1020"/>
-      <stop offset="100%" stop-color="#070b16"/>
-    </linearGradient>
-
-    <linearGradient id="metalClipGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="25%" stop-color="#cbd5e1"/>
-      <stop offset="50%" stop-color="#94a3b8"/>
-      <stop offset="75%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-
-    <linearGradient id="lanyardRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a8a"/>
-      <stop offset="50%" stop-color="#247bff"/>
-      <stop offset="100%" stop-color="#1e3a8a"/>
-    </linearGradient>
-
-    <!-- Holographic Rainbow Foil Sweep -->
-    <linearGradient id="holoSweep" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#247bff" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#ff354f" stop-opacity="0.3"/>
-      <stop offset="50%" stop-color="#38ef7d" stop-opacity="0.5"/>
-      <stop offset="75%" stop-color="#247bff" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#247bff" stop-opacity="0"/>
-    </linearGradient>
-
-    <clipPath id="idBadgeClip">
-      <rect x="0" y="0" width="280" height="340" rx="18"/>
-    </clipPath>
-
-    <clipPath id="idPhotoClip">
-      <rect x="0" y="0" width="105" height="125" rx="10"/>
-    </clipPath>
-
-    <style>
-      @media (prefers-reduced-motion: reduce) {
-        .lanyard-rig { animation: none !important; transform: rotate(0deg) !important; }
-        .holo-light { animation: none !important; }
-      }
-
-      .id-font-mono { font-family: 'Fira Code', Consolas, monospace; }
-      .id-font-sans { font-family: 'Inter', -apple-system, sans-serif; }
-      .id-font-display { font-family: 'Space Grotesk', -apple-system, sans-serif; }
-
-      /* Realistic Lanyard Pendulum Physics:
-         Drop in from top (0s to 1.8s) with damped oscillation, 
-         settling into steady gentle +/- 1.7 degree natural sway */
-      @keyframes pendulumDropAndSway {
-        0% { transform: translateY(-160px) rotate(-14deg); }
-        15% { transform: translateY(0px) rotate(11deg); }
-        30% { transform: translateY(0px) rotate(-7deg); }
-        45% { transform: translateY(0px) rotate(4.5deg); }
-        60% { transform: translateY(0px) rotate(-2.5deg); }
-        75% { transform: translateY(0px) rotate(1.7deg); }
-        87% { transform: translateY(0px) rotate(-1.7deg); }
-        100% { transform: translateY(0px) rotate(1.7deg); }
-      }
-
-      @keyframes continuousGentleSway {
-        0%, 100% { transform: rotate(-1.7deg); }
-        50% { transform: rotate(1.7deg); }
-      }
-
-      .lanyard-rig {
-        transform-origin: 430px 0px;
-        animation: pendulumDropAndSway 4s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards,
-                   continuousGentleSway 6s ease-in-out 4s infinite alternate;
-      }
-
-      /* Holographic foil sweep */
-      @keyframes holoSweepAnim {
-        0% { transform: translateX(-350px) rotate(35deg); }
-        35% { transform: translateX(350px) rotate(35deg); }
-        100% { transform: translateX(350px) rotate(35deg); }
-      }
-      .holo-light { animation: holoSweepAnim 7s ease-in-out infinite; }
-    </style>
-  </defs>
-
-  <!-- Ambient Backdrop -->
-  <rect x="1" y="1" width="858" height="418" rx="24" fill="#070b16"/>
-  <rect x="1" y="1" width="858" height="418" rx="24" fill="none" stroke="rgba(36,123,255,0.25)" stroke-width="1.8"/>
-
-  <!-- Background Data Grid Accents -->
-  <g opacity="0.3" transform="translate(60, 40)">
-    <text x="0" y="30" fill="#247bff" class="id-font-mono" font-size="11">NODE_TELEMETRY: ACTIVE</text>
-    <text x="0" y="50" fill="#8b949e" class="id-font-mono" font-size="10">SECURITY CLEARANCE: TIER-1 LEAD</text>
-    <text x="0" y="70" fill="#8b949e" class="id-font-mono" font-size="10">RAWALPINDI HUB // 0x42_CIPHER</text>
-  </g>
-  <g opacity="0.3" transform="translate(650, 40)">
-    <text x="0" y="30" fill="#247bff" class="id-font-mono" font-size="11">SOC_DISPATCH: OPERATIONAL</text>
-    <text x="0" y="50" fill="#8b949e" class="id-font-mono" font-size="10">INTRUSION DETECT: RUNNING</text>
-    <text x="0" y="70" fill="#8b949e" class="id-font-mono" font-size="10">ENCRYPTION: AES-256-GCM</text>
-  </g>
-
-  <!-- ================= LANYARD SUSPENSION RIG ================= -->
-  <g class="lanyard-rig">
-    
-    <!-- Heavy Woven Strap (Disappears above top border) -->
-    <path d="M414 0 L414 48 L446 48 L446 0 Z" fill="url(#lanyardRibbon)"/>
-    <path d="M416 0 L416 48" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="2 2"/>
-    <path d="M444 0 L444 48" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="2 2"/>
-
-    <!-- Metallic Carabiner / Clasp Assembly -->
-    <g transform="translate(415, 46)">
-      <!-- Top Metal Loop -->
-      <rect x="6" y="0" width="18" height="12" rx="3" fill="url(#metalClipGrad)" stroke="#334155" stroke-width="1"/>
-      <rect x="9" y="3" width="12" height="6" rx="2" fill="#070b16"/>
-      
-      <!-- Swivel Joint -->
-      <rect x="11" y="11" width="8" height="6" rx="2" fill="url(#metalClipGrad)"/>
-      
-      <!-- Carabiner Clasp Body -->
-      <path d="M8 17 C4 17 4 33 15 33 C26 33 26 17 22 17" fill="none" stroke="url(#metalClipGrad)" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="8" y1="21" x2="22" y2="21" stroke="#cbd5e1" stroke-width="1.5"/>
-    </g>
-
-    <!-- Badge Punch-Hole Slot in Card Header -->
-    <g transform="translate(290, 80)">
-      
-      <!-- Drop Shadow of Badge Card -->
-      <rect x="-3" y="-3" width="286" height="346" rx="20" fill="#000000" fill-opacity="0.6"/>
-
-      <!-- BADGE CARD BASE -->
-      <g clip-path="url(#idBadgeClip)">
-        <rect x="0" y="0" width="280" height="340" fill="url(#idCardBg)"/>
-        
-        <!-- Perimeter Glowing Hairline -->
-        <rect x="1" y="1" width="278" height="338" rx="17" fill="none" stroke="rgba(36,123,255,0.4)" stroke-width="1.5"/>
-
-        <!-- Top Header Strip -->
-        <rect x="0" y="0" width="280" height="42" fill="#111a33"/>
-        <line x1="0" y1="42" x2="280" y2="42" stroke="#247bff" stroke-width="1" stroke-opacity="0.5"/>
-
-        <!-- Badge Clip Punch Hole -->
-        <rect x="115" y="8" width="50" height="8" rx="4" fill="#070b16" stroke="#475569" stroke-width="1"/>
-
-        <!-- Header Title -->
-        <text x="140" y="33" fill="#ffffff" class="id-font-mono" font-size="10.5" font-weight="700" text-anchor="middle" letter-spacing="0.12em">
-          DEFENSIVE OPERATIONS PASS
-        </text>
-
-        <!-- Portrait Frame -->
-        <g transform="translate(20, 56)">
-          <rect x="-2" y="-2" width="109" height="129" rx="12" fill="#070b16" stroke="#247bff" stroke-width="1.5"/>
-          <image href="data:image/svg+xml;utf8,%0A%20%20%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20380%22%3E%0A%20%20%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22pGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23247bff%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ff354f%22%20stop-opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%20%20%20%20%3CclipPath%20id%3D%22avatarCut%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22180%22%20r%3D%22130%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%20%20%20%20%3C!--%20Stylized%20high-fidelity%20representation%20of%20Malik%20Abubakar%20Ali%20with%20characteristic%20hoodie%20%26%20wavy%20hair%20--%3E%0A%20%20%20%20%20%20%20%20%3Cg%20clip-path%3D%22url(%23avatarCut)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%22300%22%20height%3D%22380%22%20fill%3D%22%230c142c%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Background%20Cyber%20Glows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2290%22%20cy%3D%22110%22%20r%3D%2290%22%20fill%3D%22%23247bff%22%20opacity%3D%220.3%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22210%22%20cy%3D%22200%22%20r%3D%2290%22%20fill%3D%22%23ff354f%22%20opacity%3D%220.25%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Body%20%26%20Hoodie%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M50%20380%20C60%20300%2080%20250%20150%20250%20C220%20250%20240%20300%20250%20380%20Z%22%20fill%3D%22%23141a29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M90%20260%20C110%20230%20190%20230%20210%20260%20L200%20380%20L100%20380%20Z%22%20fill%3D%22%231b2438%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hood%20Linings%20with%20Blue%2FCrimson%20Edge%20Rim%20Lighting%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M75%20250%20C85%20200%20110%20185%20150%20185%20C190%20185%20215%20200%20225%20250%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%224%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M225%20250%20C215%20200%20190%20185%20150%20185%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Neck%20%26%20Face%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M125%20180%20L175%20180%20L170%20235%20L130%20235%20Z%22%20fill%3D%22%23e2a77e%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Jaw%20%2F%20Head%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M105%20130%20C105%2085%20195%2085%20195%20130%20C195%20190%20150%20215%20150%20215%20C150%20215%20105%20190%20105%20130%20Z%22%20fill%3D%22%23efb68d%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Beard%20%2F%20Mustache%20%2F%20Goatee%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M128%20172%20Q150%20182%20172%20172%20Q150%20178%20128%20172%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M135%20192%20Q150%20212%20165%20192%20Q150%20200%20135%20192%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M110%20145%20C110%20185%20140%20210%20150%20212%20C160%20210%20190%20185%20190%20145%20C185%20180%20160%20202%20150%20202%20C140%20202%20115%20180%20110%20145%22%20fill%3D%22%23141a27%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Eyes%20%26%20Eyebrows%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M118%20122%20Q133%20118%20142%20124%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M158%20124%20Q167%20118%20182%20122%22%20stroke%3D%22%23111622%22%20stroke-width%3D%223.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22169%22%20cy%3D%22132%22%20rx%3D%224.5%22%20ry%3D%225.5%22%20fill%3D%22%23111622%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Nose%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M150%20126%20L147%20154%20L154%20154%22%20fill%3D%22none%22%20stroke%3D%22%23ba7c57%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Voluminous%20Wavy%20Hair%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M85%20130%20C75%2090%20100%2050%20150%2045%20C200%2045%20230%2085%20220%20125%20C228%20100%20210%2065%20150%2065%20C105%2065%2095%20105%2085%20130%20Z%22%20fill%3D%22%23111723%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M95%20110%20C80%20130%2090%20160%2095%20170%20C90%20150%2090%20120%20110%2090%22%20fill%3D%22none%22%20stroke%3D%22%23247bff%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M205%20110%20C220%20130%20210%20160%20205%20170%20C210%20150%20210%20120%20190%2090%22%20fill%3D%22none%22%20stroke%3D%22%23ff354f%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3C!--%20Hair%20curls%20volume%20mass%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M100%2080%20Q140%2030%20180%2065%20Q210%2060%20215%2095%20Q230%20140%20215%20160%20Q210%20110%20185%2085%20Q150%2075%20115%2095%20Z%22%20fill%3D%22%23161e2e%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20" x="0" y="0" width="105" height="125" preserveAspectRatio="xMidYMid slice" clip-path="url(#idPhotoClip)"/>
-          <rect x="5" y="103" width="95" height="17" rx="4" fill="#070b16" fill-opacity="0.85" stroke="#247bff" stroke-width="0.8"/>
-          <text x="52" y="115" fill="#38ef7d" class="id-font-mono" font-size="8" font-weight="700" text-anchor="middle">ACTIVE DEFENDER</text>
-        </g>
-
-        <!-- Personnel Details to the Right of Portrait -->
-        <g transform="translate(138, 62)">
-          <text x="0" y="12" fill="#8b949e" class="id-font-mono" font-size="8.5">OPERATOR</text>
-          <text x="0" y="27" fill="#ffffff" class="id-font-display" font-size="13" font-weight="700">M. ABUBAKAR</text>
-          
-          <text x="0" y="47" fill="#8b949e" class="id-font-mono" font-size="8.5">HANDLE</text>
-          <text x="0" y="61" fill="#247bff" class="id-font-mono" font-size="11.5" font-weight="600">bakarcipher</text>
-
-          <text x="0" y="81" fill="#8b949e" class="id-font-mono" font-size="8.5">ROLE / UNIT</text>
-          <text x="0" y="95" fill="#e6edf3" class="id-font-sans" font-size="10" font-weight="600">Team Lead</text>
-          <text x="0" y="108" fill="#8b949e" class="id-font-sans" font-size="9">Ace Solutions</text>
-        </g>
-
-        <!-- Secondary Information Strip -->
-        <g transform="translate(20, 196)">
-          <rect x="0" y="0" width="240" height="52" rx="8" fill="#070b16" stroke="#247bff" stroke-width="1" stroke-opacity="0.25"/>
-          
-          <text x="12" y="18" fill="#8b949e" class="id-font-mono" font-size="8.5">AFFILIATION</text>
-          <text x="12" y="32" fill="#ffffff" class="id-font-sans" font-size="10" font-weight="600">Riphah Int. University</text>
-          <text x="12" y="44" fill="#247bff" class="id-font-sans" font-size="9">Cyber Security Scholar</text>
-
-          <line x1="140" y1="8" x2="140" y2="44" stroke="#247bff" stroke-opacity="0.2"/>
-
-          <text x="150" y="18" fill="#8b949e" class="id-font-mono" font-size="8.5">NODE DEPLOY</text>
-          <text x="150" y="32" fill="#ffffff" class="id-font-mono" font-size="10" font-weight="700">PK-RAW-01</text>
-          <text x="150" y="44" fill="#38ef7d" class="id-font-mono" font-size="8.5">VERIFIED</text>
-        </g>
-
-        <!-- Barcode & Security Microprint Row -->
-        <g transform="translate(20, 260)">
-          <!-- Authentic Barcode Lines -->
-          <g fill="#e6edf3">
-            <rect x="0" y="0" width="2" height="28"/>
-            <rect x="4" y="0" width="1" height="28"/>
-            <rect x="7" y="0" width="3" height="28"/>
-            <rect x="13" y="0" width="1.5" height="28"/>
-            <rect x="17" y="0" width="4" height="28"/>
-            <rect x="24" y="0" width="2" height="28"/>
-            <rect x="28" y="0" width="1" height="28"/>
-            <rect x="31" y="0" width="3" height="28"/>
-            <rect x="36" y="0" width="1.5" height="28"/>
-            <rect x="40" y="0" width="4" height="28"/>
-            <rect x="47" y="0" width="1" height="28"/>
-            <rect x="50" y="0" width="3.5" height="28"/>
-            <rect x="56" y="0" width="2" height="28"/>
-            <rect x="61" y="0" width="1" height="28"/>
-            <rect x="64" y="0" width="4" height="28"/>
-            <rect x="70" y="0" width="2" height="28"/>
-            <rect x="74" y="0" width="1.5" height="28"/>
-            <rect x="78" y="0" width="3" height="28"/>
-            <rect x="84" y="0" width="1" height="28"/>
-            <rect x="88" y="0" width="2.5" height="28"/>
-            <rect x="93" y="0" width="1.5" height="28"/>
-            <rect x="98" y="0" width="3.5" height="28"/>
-            <rect x="104" y="0" width="1" height="28"/>
-            <rect x="108" y="0" width="2" height="28"/>
-            <rect x="113" y="0" width="4" height="28"/>
-            <rect x="120" y="0" width="2" height="28"/>
-          </g>
-
-          <text x="0" y="38" fill="#8b949e" class="id-font-mono" font-size="8">8 901244 092471</text>
-
-          <!-- Security Hologram Seal Pill -->
-          <g transform="translate(145, 2)">
-            <rect x="0" y="0" width="95" height="28" rx="6" fill="#13233f" stroke="#ff354f" stroke-width="1" stroke-opacity="0.4"/>
-            <text x="47" y="14" fill="#ff354f" class="id-font-mono" font-size="8" font-weight="700" text-anchor="middle">CIPHER SECURE</text>
-            <text x="47" y="24" fill="#8b949e" class="id-font-mono" font-size="7.5" text-anchor="middle">TAMPER-PROOF</text>
-          </g>
-        </g>
-
-        <!-- Holographic Foil Sweep Shimmer -->
-        <rect x="-100" y="-50" width="180" height="450" fill="url(#holoSweep)" class="holo-light" pointer-events="none"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">BakarCipher — Cybersecurity Journey</title>
+<desc id="desc">Animated operator identity badge and cybersecurity journey featuring Abubakar Ali, Riphah International University, security labs and BakarCipher projects.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101e39"/><stop offset=".55" stop-color="#080f20"/><stop offset="1" stop-color="#060b17"/></linearGradient>
+  <linearGradient id="card" x2="1" y2="1"><stop stop-color="#172849"/><stop offset="1" stop-color="#0a1225"/></linearGradient>
+  <linearGradient id="blue" x2="1"><stop stop-color="#247bff"/><stop offset=".5" stop-color="#57e2ff"/><stop offset="1" stop-color="#8d6bff"/></linearGradient>
+  <linearGradient id="metal" x2="1"><stop stop-color="#64748b"/><stop offset=".4" stop-color="#e2e8f0"/><stop offset="1" stop-color="#64748b"/></linearGradient>
+  <linearGradient id="shine" x2="1"><stop stop-color="#57e2ff" stop-opacity="0"/><stop offset=".5" stop-color="#57e2ff" stop-opacity=".16"/><stop offset="1" stop-color="#57e2ff" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#58a6ff" stroke-opacity=".08"/></pattern>
+  <clipPath id="badgeClip"><rect width="310" height="444" rx="19"/></clipPath>
+  <style>
+    .mono{font-family:'Fira Code',Consolas,monospace}.sans{font-family:Inter,Arial,sans-serif}.display{font-family:'Space Grotesk',Inter,Arial,sans-serif}
+    .muted{fill:#91a3bd}.white{fill:#f3f8ff}.cyan{fill:#57e2ff}.green{fill:#46e6a1}
+    @keyframes enter{0%{transform:translateY(-145px) rotate(-12deg)}20%{transform:translateY(0) rotate(9deg)}45%{transform:rotate(-5deg)}70%{transform:rotate(2deg)}100%{transform:rotate(0)}}
+    @keyframes sway{0%,100%{transform:rotate(-1.3deg)}50%{transform:rotate(1.3deg)}}
+    @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    @keyframes scan{0%{transform:translateY(-240px)}100%{transform:translateY(600px)}}
+    @keyframes dash{to{stroke-dashoffset:-36}}
+    .rig{transform-origin:256px 0;animation:enter 2.2s ease-out both,sway 5s ease-in-out 2.2s infinite}
+    .pulse{animation:pulse 2.8s ease-in-out infinite}.scan{animation:scan 9s linear infinite}.path{stroke-dasharray:5 7;animation:dash 3s linear infinite}
+    @media(prefers-reduced-motion:reduce){.rig,.pulse,.scan,.path{animation:none!important}}
+  </style>
+</defs>
+<!-- Stage -->
+<rect x="1" y="1" width="1098" height="618" rx="25" fill="url(#bg)" stroke="#254c7d" stroke-opacity=".7" stroke-width="2"/>
+<rect x="2" y="2" width="1096" height="616" rx="24" fill="url(#grid)"/>
+<circle cx="1020" cy="75" r="210" stroke="#247bff" stroke-opacity=".09" stroke-width="65"/>
+<circle cx="100" cy="590" r="160" stroke="#57e2ff" stroke-opacity=".08" stroke-width="55"/>
+<text x="38" y="39" class="mono cyan" font-size="12" letter-spacing="2">BAKARCIPHER // PERSONAL SECURITY PORTFOLIO</text>
+<text x="1060" y="39" text-anchor="end" class="mono muted" font-size="11">BUILD • BREAK • DEFEND • LEARN</text>
+<path d="M36 53H1064" stroke="#3a669a" stroke-opacity=".45"/>
+<!-- Hanging badge -->
+<g class="rig">
+  <path d="M244 -8V84H268V-8" fill="#1d4fb4" stroke="#65caff" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M250 0V84M262 0V84" stroke="#d5ecff" stroke-opacity=".25" stroke-dasharray="3 5"/>
+  <rect x="247" y="80" width="18" height="22" rx="5" fill="url(#metal)"/>
+  <rect x="252" y="85" width="8" height="9" rx="3" fill="#17243a"/>
+  <path d="M250 101C240 113 247 129 256 129S272 113 262 101" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(101 126)">
+    <rect x="5" y="7" width="310" height="444" rx="19" fill="#000" opacity=".48"/>
+    <g clip-path="url(#badgeClip)">
+      <rect width="310" height="444" fill="url(#card)"/>
+      <rect width="310" height="52" fill="#142747"/>
+      <path d="M0 52H310" stroke="url(#blue)" stroke-width="2"/>
+      <rect x="129" y="9" width="52" height="8" rx="4" fill="#07101e" stroke="#607a9c"/>
+      <text x="155" y="38" text-anchor="middle" class="mono white" font-size="11" font-weight="700" letter-spacing="1.4">CYBER OPERATOR ID</text>
+      <!-- Portrait illustration, not a photograph -->
+      <g transform="translate(19 72)">
+        <rect width="119" height="142" rx="11" fill="#0a1831" stroke="#4f9bff" stroke-width="1.5"/>
+        <circle cx="60" cy="60" r="47" fill="#183b65"/>
+        <path d="M10 142Q18 101 60 101T109 142" fill="#131b30" stroke="#398ee9" stroke-width="2"/>
+        <path d="M35 109Q29 83 38 58Q48 32 60 32Q78 32 86 58Q94 83 85 109L60 130Z" fill="#263a59"/>
+        <ellipse cx="60" cy="75" rx="24" ry="32" fill="#c68f70"/>
+        <path d="M36 69Q28 28 61 28Q96 28 84 70Q77 50 64 48Q49 57 36 69" fill="#101624"/>
+        <path d="M45 90Q60 108 75 90Q70 116 60 115Q50 115 45 90" fill="#20202b"/>
+        <path d="M49 74H54M67 74H72" stroke="#101624" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="8" y="119" width="103" height="17" rx="4" fill="#07111f" opacity=".9"/>
+        <text x="59" y="131" text-anchor="middle" class="mono green" font-size="8.5">LEARNING IN PUBLIC</text>
       </g>
+      <g transform="translate(151 80)">
+        <text class="mono muted" font-size="9">OPERATOR</text>
+        <text y="20" class="display white" font-size="17" font-weight="700">ABUBAKAR</text>
+        <text y="39" class="display white" font-size="17" font-weight="700">ALI</text>
+        <text y="65" class="mono muted" font-size="9">CALLSIGN</text>
+        <text y="83" class="mono cyan" font-size="13" font-weight="700">BakarCipher</text>
+        <text y="108" class="mono muted" font-size="9">FOCUS</text>
+        <text y="125" class="sans white" font-size="10">Blue • Red • DFIR</text>
+      </g>
+      <rect x="19" y="230" width="272" height="66" rx="9" fill="#091629" stroke="#315b8a"/>
+      <text x="31" y="247" class="mono muted" font-size="9">ACADEMIC BASE</text>
+      <text x="31" y="265" class="sans white" font-size="12" font-weight="700">Riphah International University</text>
+      <text x="31" y="281" class="mono cyan" font-size="10">BS CYBER SECURITY • PAKISTAN</text>
+      <text x="20" y="322" class="mono muted" font-size="9">PRACTICAL DOMAINS</text>
+      <g class="mono" font-size="9" text-anchor="middle">
+        <rect x="19" y="331" width="81" height="26" rx="6" fill="#123e50" stroke="#2caac0"/><text x="59" y="348" fill="#aaf6ff">SOC / SIEM</text>
+        <rect x="108" y="331" width="83" height="26" rx="6" fill="#40213a" stroke="#c66592"/><text x="149" y="348" fill="#ffd2e6">PENTEST</text>
+        <rect x="199" y="331" width="92" height="26" rx="6" fill="#302b53" stroke="#8d80e9"/><text x="245" y="348" fill="#ddd6ff">FORENSICS</text>
+      </g>
+      <path d="M19 374H291" stroke="#42658e" stroke-opacity=".6"/>
+      <text x="20" y="392" class="mono muted" font-size="9">PROJECT LAB</text>
+      <text x="20" y="409" class="mono white" font-size="11" font-weight="700">BAKARCIPHER / BUILDER</text>
+      <circle cx="280" cy="400" r="5" fill="#46e6a1" class="pulse"/>
+      <text x="20" y="430" class="mono muted" font-size="8">PORTFOLIO ID • NOT AN ACCESS CREDENTIAL</text>
+      <rect x="-80" y="-150" width="110" height="700" fill="url(#shine)" transform="rotate(25 140 220)" class="scan"/>
     </g>
+    <rect x=".8" y=".8" width="308.4" height="442.4" rx="18" stroke="#499bff" stroke-opacity=".7" stroke-width="1.6"/>
   </g>
+</g>
+<!-- Journey panel -->
+<g transform="translate(454 91)">
+  <text class="mono cyan" font-size="12" letter-spacing="2">// THE JOURNEY SO FAR</text>
+  <text y="45" class="display white" font-size="35" font-weight="800">From Curiosity</text>
+  <text y="86" class="display" font-size="35" font-weight="800" fill="#57e2ff">to Cyber Defense.</text>
+  <text y="117" class="sans" fill="#b5c5dc" font-size="14">A student, a builder, and a hands-on security learner.</text>
+  <path d="M18 155V397" stroke="#32679d" stroke-width="2" class="path"/>
+  <g class="sans">
+    <circle cx="18" cy="164" r="7" fill="#57e2ff"/><text x="42" y="164" class="mono cyan" font-size="11">01 / FOUNDATION</text>
+    <text x="42" y="186" class="white" font-size="15" font-weight="700">Networking, Linux &amp; security fundamentals</text>
+    <text x="42" y="205" class="muted" font-size="12">Packet Tracer • Wireshark • Kali Linux • VMware</text>
+    <circle cx="18" cy="242" r="7" fill="#8d80e9"/><text x="42" y="242" class="mono" fill="#b3a9ff" font-size="11">02 / HANDS-ON LABS</text>
+    <text x="42" y="264" class="white" font-size="15" font-weight="700">Detection, hardening &amp; ethical testing</text>
+    <text x="42" y="283" class="muted" font-size="12">Snort • Wazuh • Nessus • Nmap • iptables</text>
+    <circle cx="18" cy="320" r="7" fill="#46e6a1"/><text x="42" y="320" class="mono green" font-size="11">03 / BUILDING BAKARCIPHER</text>
+    <text x="42" y="342" class="white" font-size="15" font-weight="700">Turning learning into working tools</text>
+    <text x="42" y="361" class="muted" font-size="12">ReconX • SentinelSIEM • EndpointGuard • DiskTrace</text>
+    <circle cx="18" cy="398" r="7" fill="#ffb86c"/><text x="42" y="398" class="mono" fill="#ffb86c" font-size="11">04 / THE NEXT CHAPTER</text>
+    <text x="42" y="420" class="white" font-size="15" font-weight="700">SOC, threat hunting &amp; continuous growth</text>
+    <text x="42" y="439" class="muted" font-size="12">Learning through practice, evidence, and iteration</text>
+  </g>
+</g>
+<path d="M454 564H1056" stroke="#3b5e8b" stroke-opacity=".55"/>
+<text x="454" y="587" class="mono" fill="#a2b5ce" font-size="11">MISSION: UNDERSTAND THE ATTACK. STRENGTHEN THE DEFENSE.</text>
+<text x="1056" y="587" text-anchor="end" class="mono cyan" font-size="11">#BAKARCIPHER</text>
 </svg>
